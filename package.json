@@ -16,5 +16,9 @@
     "@types/node": "^22.10.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.0",
+    "openai": "^7.18.0"
   }
 }
