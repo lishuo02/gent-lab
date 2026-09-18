@@ -77,7 +77,7 @@ async function runAgentLoop(userInput: string) {
 
     for (const toolCall of toolCalls) {
       if (toolCall.type !== "function") continue;
-      const args = JSON.parse(toolCall.function.arguments);
+      const args = toolCall.function.arguments ? JSON.parse(toolCall.function.arguments) : {};
       console.log(`[tool call] ${toolCall.function.name}(${toolCall.function.arguments})`);
       const result = await callTool(toolCall.function.name, args);
       messages.push({
