@@ -8,18 +8,22 @@
     "dev:basic": "tsx src/01-basic/index.ts",
     "dev:tool-calling": "tsx src/02-tool-calling/index.ts",
     "dev:mcp": "tsx src/03-mcp/index.ts",
+    "dev:a2a:server": "tsx src/04-a2a/server.ts",
     "dev:a2a": "tsx src/04-a2a/index.ts",
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/express": "^5.0.6",
     "@types/node": "^22.10.0",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   },
   "dependencies": {
+    "@a2a-js/sdk": "^1.1.0",
     "@modelcontextprotocol/sdk": "^1.30.0",
     "dotenv": "^18.0.0",
+    "express": "^5.2.1",
     "openai": "^7.18.0",
     "zod": "^4.6.5"
   }
