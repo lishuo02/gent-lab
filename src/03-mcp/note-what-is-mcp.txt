@@ -1,0 +1,4 @@
+MCP 想解决的问题：以前每接一个新工具/数据源，都要给每个 Agent 框架重写一套私有集成代码。
+MCP 把"工具/资源怎么描述、怎么调用"标准化成协议：
+Server 端用 registerTool 暴露工具，Client 端通过 tools/list 发现、tools/call 调用。
+Server 和 Client 是两个独立进程，通过 stdio（标准输入输出）传 JSON-RPC 消息通信。
